@@ -1,0 +1,21 @@
+Tools and Technologies Used :
+    Python - The python wrapper script uses pandas dataframes to easily manipulate huge datasets.
+    
+    AWS S3 Storage - Data Lake is created on AWS cloud and the data is saved in columnar format in the form of parquet files saved in S3 which is 
+    easily available and accessible on the cloud. (Allows extensibility to load the data from S3 to any database , ex: Redshift)
+    
+    Spark - The Spark instance used in the program enables parallelization of the code in a distributed cluster enabling scalability. PySpark SQL is used to 
+    manipulate and load the data to perform ETL.
+    
+    Data Model - Star schema (Denormalized to support OLAP queries)
+
+
+Frequency : The data need to be updated every day to record the number of i94 entries each day to track the number of immigrants, visitors etc. entering the US
+
+If the data volume is increased by 100x, the ETL would need to be run in parallel mode on multiple clusters
+
+If the data populates a dashboard that gets updated daily, create an Airflow DAG to be scheduled to run daily at 7am, which will pick the latest(previous days
+data) and processes the datafile and runs the ETL.   
+
+If the database needs to be accessed by 100+ people, load the data from S3 into Redshift on AWS cloud which is scalable enough to support multiple concurrent 
+user access on the cloud.
