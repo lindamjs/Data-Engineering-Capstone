@@ -1,0 +1,72 @@
+1. DIM_VISITORS
+
+i94yr    - Year of admission 
+i94mon   - Month of admission
+i94port  - Port of entry
+i94addr  - US State code for port of entry
+arrdatetime - Arrival datetime
+depdate     - Departure datetime
+i94visa     - Passenger Visa type
+biryear     - Passenger birth year
+gender      - Passenger gender
+airline     - Airline code for arrival flight
+admnum      - i94 admission number
+fltno       - Flight number for arrival flight
+visatype    - Passenger Visa type
+age         - Age of the passenger(calculated field)
+
+
+2. DIM_CITY_DEMOG
+
+_c0   - City Name
+_c1   - State name
+_c2  - Median Age
+_c3  - Male Population
+_c4 - Female Population
+_c5    - Total Population
+_c7     - Foreign Born
+_c9     - US State code
+
+
+3. DIM_AIRPORT
+
+_c0   - Airport Code
+_c1   - Airport Type
+_c2  - Airport Name
+_c3  - Elevation Ft
+_c4 - Continent
+_c5    - Country
+_c6    - Region
+_c7     - Municipality
+_c8     - GPS Code
+_c9     - IATA Code
+_c10    - Local code
+_c11    - Co-ordinates
+
+
+4. FACT_IMMIGRATION
+
+i94yr
+i94mon
+i94port
+i94addr
+arrdatetime
+visatype
+gender
+age
+City
+State
+State_CD
+Median_Age
+Male_Population
+Female_Population
+Total_Population
+Foreign_Born
+Airport_Code
+Airport_Name
+Airport_Region
+
+
+
+
+
